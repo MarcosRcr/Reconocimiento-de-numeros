@@ -28,7 +28,7 @@ function predecir() {
           }
       }
 
-      arr = [arr]; //Meter el arreglo en otro arreglo por que si no tio tensorflow se enoja >:(
+      arr = [arr]; //Meter el arreglo en otro arreglo 
       //Nah basicamente Debe estar en un arreglo nuevo en el indice 0, por ser un tensor4d en forma 1, 28, 28, 1
       var tensor4 = tf.tensor4d(arr);
       var resultados = modelo.predict(tensor4).dataSync();
@@ -45,7 +45,7 @@ function predecir() {
    * @param {int} width
    * @param {int} height
    * @param {boolean} resize_canvas if true, canvas will be resized. Optional.
-   * Cambiado por RT, resize canvas ahora es donde se pone el chiqitillllllo
+   * resize canvas
    */
   function resample_single(canvas, width, height, resize_canvas) {
       var width_source = canvas.width;
@@ -113,7 +113,7 @@ function predecir() {
           }
       }
 
-      //Ya que esta, exagerarlo. Blancos blancos y negros negros..?
+   
 
       for (var p=0; p < data2.length; p += 4) {
           var gris = data2[p]; //Esta en blanco y negro
@@ -121,7 +121,7 @@ function predecir() {
           if (gris < 100) {
               gris = 0; //exagerarlo
           } else {
-              gris = 255; //al infinito
+              gris = 255; 
           }
 
           data2[p] = gris;
