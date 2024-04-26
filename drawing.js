@@ -1,9 +1,9 @@
-var brushWidth = 10;
-var color = "#000000";
-var drawingcanvas;
+let brushWidth = 12;
+let color = "#000000";
+let drawingcanvas;
 
 (function() {
-  var $ = function(id){return document.getElementById(id)};
+  let $ = function(id){return document.getElementById(id)};
 
   drawingcanvas = this.__canvas = new fabric.Canvas('bigcanvas', {
     isDrawingMode: true
@@ -16,3 +16,4 @@ var drawingcanvas;
     drawingcanvas.freeDrawingBrush.width = brushWidth;
   }
 })();
+
